@@ -43,15 +43,6 @@ $logado = $_SESSION['nome'];
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="calculadora.php">CALCULADORA</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link" href="imc.php">IMC</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="assinatura.php">ASSINATURAS</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="sistema.php">SISTEMA</a>
             </li>
           </ul>

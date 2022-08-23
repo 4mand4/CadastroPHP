@@ -28,11 +28,13 @@
             $email = $users['email'];
             $senha = $users['senha'];
             $telefone = $users['telefone'];
-            $sexo = $users['sexo'];
-            $dataNasc = $users['data_nasc'];
-            $cidade = $users['cidade'];
-            $estado = $users['estado'];
             $endereco = $users['endereco'];
+            $departamento = $users['departamento'];
+            $salarioBase = $users['salarioBase'];
+            $vt = $users['vt'];
+            $irrf = $users['irrf'];
+            $inss = $users['inss'];
+            $numDependentes = $users['numDependentes'];
             endforeach; 
         }
         # Se não existir ele volta para a página da lista
@@ -85,31 +87,28 @@
                             <div class="mb-4">
                                 <input type="tel" class="form-control" name="telefone" id="telefone" class="inputUser" value="<?=$telefone?>" required>
                             </div>
-                            
-                            <!-- Operador ternário para verificar se a opção do radio está selecionada, se sim ficar marcada -->
-                            <div class="mb-4">
-                            <label for="sexo"><i class="bi bi-gender-ambiguous"></i> Sexo: </label>
-                            <input type="radio" class="form-check-input" id="feminino" name="genero" value="feminino" <?= $sexo == 'feminino' ? 'checked' : '' ?> required>
-                            <label for="feminino">Feminino</label>
-                            <input type="radio" class="form-check-input" id="masculino" name="genero" value="masculino" <?= $sexo == 'masculino' ? 'checked' : '' ?> required>
-                            <label for="masculino">Masculino</label>
-                            <input type="radio" class="form-check-input" id="outro" name="genero" value="outro" <?= $sexo == 'outro' ? 'checked' : '' ?> required>
-                            <label for="outro">Outro</label>
-                            </div>
-
-                            <div class="mb-4">
-                            <label for="dataNascimento"><b>Data de Nascimento:</b></label>
-                            <input type="date" name="dataNascimento" id="dataNascimento" value="<?=$dataNasc?>" required>
-                            </div>
-                            <div class="mb-4">
-                                <input type="text" class="form-control" name="cidade" id="cidade" class="inputUser"  value="<?=$cidade?>" required>
-                            </div>
-                            <div class="mb-4">
-                                <input type="text" class="form-control" name="estado" id="estado" class="inputUser"  value="<?=$estado?>" required>
-                            </div>
                             <div class="mb-4">
                                 <input type="text" class="form-control" name="endereco" id="endereco" class="inputUser"  value="<?=$endereco?>" required>
                             </div>
+                            <div class="mb-4">
+                            <input type="text" name="departamento" id="departamento" value="<?=$departamento?>" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="salarioBase" id="cidade" class="inputUser"  value="<?=$salarioBase?>" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="vt" id="vt" class="inputUser"  value="<?=$vt?>" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="irrf" id="irrf" class="inputUser"  value="<?=$irrf?>" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="inss" id="inss" class="inputUser"  value="<?=$inss?>" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="numDependentes" id="numDependentes" class="inputUser"  value="<?=$numDependentes?>" required>
+                            </div>
+
                             <!-- Como não existe input para entrar com o id no formulário, criou-se um input do tipo hidden com ele como valor-->
                             <input type="hidden" name="id" value=<?=$id?>>
                             <p class="text-center">

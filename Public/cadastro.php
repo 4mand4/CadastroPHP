@@ -9,18 +9,20 @@
 
         # Passando o que recebeu no formulário como parâmetro para as variáveis
         $nome = $_POST['nome'];
-        $email = $_POST['email'];
         $senha = $_POST['senha'];
+        $email = $_POST['email'];
         $telefone = $_POST['telefone'];
-        $sexo = $_POST['genero'];
-        $dataNasc = $_POST['dataNascimento'];
-        $cidade = $_POST['cidade'];
-        $estado = $_POST['estado'];
         $endereco = $_POST['endereco'];
+        $departamento = $_POST['departamento'];
+        $salarioBase = $_POST['salarioBase'];
+        $vt = $_POST['vt'];
+        $irrf = $_POST['irrf'];
+        $inss = $_POST['inss'];
+        $numDependentes = $_POST['numDependentes'];
 
         # Inserir os valores das variáveis acima no banco de dados com o comando INSERT INTO
-        $result = mysqli_query($conexao, " INSERT INTO usuarios(nome,senha,email,telefone,sexo,data_nasc,cidade,estado,endereco) 
-        VALUES ('$nome','$senha','$email','$telefone','$sexo','$dataNasc','$cidade','$estado','$endereco')");
+        $result = mysqli_query($conexao, " INSERT INTO usuarios(nome,senha,email,telefone,endereco,departamento,salarioBase,vt,irrf,inss,numDependentes) 
+        VALUES ('$nome','$senha','$email','$telefone', '$endereco','$departamento','$salarioBase','$vt','$irrf','$inss','$numDependentes')");
 
         # Para voltar para a tela de login após terminar o cadastro
         header('Location: login.php');
@@ -69,29 +71,26 @@
                             <div class="mb-4">
                                 <input type="tel" class="form-control" name="telefone" id="telefone" class="inputUser" placeholder="Telefone" required>
                             </div>
-                            
-                            <div class="mb-4">
-                            <label for="sexo"><i class="bi bi-gender-ambiguous"></i> Sexo: </label>
-                            <input type="radio" class="form-check-input" id="feminino" name="genero" value="feminino" required>
-                            <label for="feminino">Feminino</label>
-                            <input type="radio" class="form-check-input" id="masculino" name="genero" value="masculino" required>
-                            <label for="masculino">Masculino</label>
-                            <input type="radio" class="form-check-input" id="outro" name="genero" value="outro" required>
-                            <label for="outro">Outro</label>
-                            </div>
-
-                            <div class="mb-4">
-                            <label for="dataNascimento"><b>Data de Nascimento:</b></label>
-                            <input type="date" name="dataNascimento" id="dataNascimento" required>
-                            </div>
-                            <div class="mb-4">
-                                <input type="text" class="form-control" name="cidade" id="cidade" class="inputUser" placeholder="Cidade" required>
-                            </div>
-                            <div class="mb-4">
-                                <input type="text" class="form-control" name="estado" id="estado" class="inputUser" placeholder="Estado" required>
-                            </div>
                             <div class="mb-4">
                                 <input type="text" class="form-control" name="endereco" id="endereco" class="inputUser" placeholder="Endereço" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="departamento" id="departamento" class="inputUser" placeholder="Departamento" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="salarioBase" id="salarioBase" class="inputUser" placeholder="Salario Base" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="vt" id="vt" class="inputUser" placeholder="V.T" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="irrf" id="irrf" class="inputUser" placeholder="IRRF" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="inss" id="inss" class="inputUser" placeholder="INSS" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" class="form-control" name="numDependentes" id="numDependentes" class="inputUser" placeholder="Nº Dependentes" required>
                             </div>
                             <p class="text-center">
                             <input type="submit" name="submit" id="submit" class="btn btn-outline-light btn-lg px-5">

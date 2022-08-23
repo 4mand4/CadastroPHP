@@ -35,12 +35,14 @@ $result = $conexao->query($sql);
                 <th>ID</th>
                 <th>NOME</th>
                 <th>EMAIL</th>
-                <th>SEXO</th>
-                <th>NASCIMENTO</th>
                 <th>TELEFONE</th>
-                <th>CIDADE</th>
-                <th>ESTADO</th>
                 <th>ENDEREÇO</th>
+                <th>DEPARTAMENTO</th>
+                <th>SALÁRIO BASE</th>
+                <th>V.T</th>
+                <th>IRRF</th>
+                <th>INSS</th>
+                <th>Nº DEPENDENTES</th>
                 <th>ALTERAR</th>
                 <th>REMOVER</th>
             </tr>
@@ -51,12 +53,14 @@ $result = $conexao->query($sql);
                 <td><?= $users['id'] ?></td>
                 <td><?= $users['nome'] ?></td>
                 <td><?= $users['email'] ?></td>
-                <td><?= $users['sexo'] ?></td>
-                <td><?= $users['data_nasc'] ?></td>
                 <td><?= $users['telefone'] ?></td>
-                <td><?= $users['cidade'] ?></td>
-                <td><?= $users['estado'] ?></td>
                 <td><?= $users['endereco'] ?></td>
+                <td><?= $users['departamento'] ?></td>
+                <td><?= $users['salarioBase'] ?></td>
+                <td><?= $users['vt'] ?></td>
+                <td><?= $users['irrf'] ?></td>
+                <td><?= $users['inss'] ?></td>
+                <td><?= $users['numDependentes'] ?></td>
                 <td>
                     <!-- Botão que direciona para a página de alterar conforme o id da linha clicada -->
                     <a class='btn btn-sm btn-light' href='editar.php?id=<?=$users['id']?>'>
